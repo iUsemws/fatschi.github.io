@@ -13,6 +13,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		errBack = function(error) {
 			console.log("Video capture error: ", error.code); 
 		};
+	document.getElementById("snap").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+	});
 
 	// Put video listeners into place
 	if(navigator.getUserMedia) { // Standard
@@ -33,9 +36,5 @@ window.addEventListener("DOMContentLoaded", function() {
 		}, errBack);
 	}
 }, false);
-
-document.getElementById("snap").addEventListener("click", function() {
-	context.drawImage(video, 0, 0, 640, 480);
-});
   
 </script>
