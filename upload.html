@@ -17,10 +17,16 @@
 </head>
 <body>
     <form id="form"></form>
+    <div id="result"></div>
     <script type="text/javascript">
        (function() {
             $('#form').append($.cloudinary.unsigned_upload_tag("ngaishik", 
-            { cloud_name: 'dqkznq6ix' }));      
+            { cloud_name: 'dqkznq6ix' }));
+            var private_url = "https://557366327443484:oXkowgZov8g5pa-YXirUpoFqdRI@api.cloudinary.com/v1_1/dqkznq6ix/resources/image";
+            $.get( private_url, function( data ) {
+            $( "#result" ).html( data );
+            alert( "Load was performed." );
+            });
         })();
     </script>
 </body>
