@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src='jquery.ui.widget.js' type='text/javascript'></script>
+    <script src='jquery.iframe-transport.js' type='text/javascript'></script>
+    <script src='jquery.fileupload.js' type='text/javascript'></script>
+    <script src='jquery.cloudinary.js' type='text/javascript'></script>
+    <script type="text/javascript">
+        $(function () {
+            $.cloudinary.config({ cloud_name: 'dqkznq6ix', api_key: '874837483274837'})
+        });
+    </script>
+    <title>title</title>
+  </head>
+  <body>
+  <input name="file" type="file" 
+   class="cloudinary-fileupload" data-cloudinary-field="image_id" 
+   data-form-data=" ... html-escaped JSON data ... " ></input>
+  </body>
+</html>
