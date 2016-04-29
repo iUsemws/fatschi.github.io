@@ -23,15 +23,20 @@
             $('#form').append($.cloudinary.unsigned_upload_tag("ngaishik", 
             { cloud_name: 'dqkznq6ix' }));
             var private_url = "https://557366327443484:oXkowgZov8g5pa-YXirUpoFqdRI@api.cloudinary.com/v1_1/dqkznq6ix/resources/image";
-            
+              var myJsonMethod = function(data){
+                console.log(data);
+            }
             $.ajax({
             url: private_url,
             success: function( data ) {
             $( "#result" ).html( data );
             alert( "Load was performed." );
             },
-            dataType: 'jsonp'
+            dataType: 'jsonp',
+            jsonp: false,
+            jsonpCallback: "myJsonMethod"
             });
+          
             
             
        
